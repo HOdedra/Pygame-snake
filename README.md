@@ -22,6 +22,12 @@ Your system will need pygame installed. Best method of execution would be throug
 
 * **Himansu Odedra** 
 
+### In Game
+
+![picture alt](http://g.recordit.co/jHfIVGzUWt.gif)
+
+
+
 ## Acknowledgments
 
 * [Sentdex](https://www.youtube.com/user/sentdex) 
