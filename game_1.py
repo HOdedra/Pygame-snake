@@ -113,7 +113,8 @@ def gameLoop():
         
         
         gameDisplay.fill(white)
-        pygame.draw.rect(gameDisplay,red,[randAppleX,randAppleY,block_size,block_size])
+        AppleThickness = 30
+        pygame.draw.rect(gameDisplay,red,[randAppleX,randAppleY,AppleThickness,AppleThickness])
         snake(block_size, snakeList)
         
         
@@ -136,10 +137,18 @@ def gameLoop():
         
         pygame.display.update()
         
+        
+        """
         if lead_x == randAppleX and lead_y == randAppleY:
             randAppleX = round(random.randrange(0,display_width-block_size)/10.0)*10.0
             randAppleY = round(random.randrange(0,display_height-block_size)/10.0)*10.0
             snakeLength += 1
+        """
+        if lead_x >= randAppleX and lead_x <= randAppleX + AppleThickness:
+            if lead_y >= randAppleY and lead_y <= randAppleY + AppleThickness:
+                randAppleX = round(random.randrange(0,display_width-block_size)/10.0)*10.0
+                randAppleY = round(random.randrange(0,display_height-block_size)/10.0)*10.0
+                snakeLength += 1
             
         #FPS
         clock.tick(FPS)
